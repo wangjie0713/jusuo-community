@@ -1,0 +1,10 @@
+# SPDX-License-Identifier: MPL-2.0
+*
+!package.json
+!public/
+!public/**
+!server/
+!server/**
+!LICENSE
+!NOTICE.md
+!THIRD_PARTY_NOTICES.md
