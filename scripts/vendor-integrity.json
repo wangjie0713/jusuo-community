@@ -1,0 +1,9 @@
+{
+  "public/vendor/three.module.js": "86bcee248b64f44bcfc23c331ae74619061957d59cab040171dcb6fb5900beb6",
+  "public/vendor/three.core.min.js": "05b2609338c76cd65daf74f3ac515bc9a5045e1b3b33edc07d8c9bd55250fa90",
+  "public/vendor/OrbitControls.js": "3f40137b0620b375637d6bce55dc830d86d79cb80b4d93aaf1b8ca6c5cb4741a",
+  "public/vendor/LICENSE": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+  "public/vendor/GLTFLoader.js": "d7f4b3a86e622f5ae040ab32349a96714e8d6b360bc706c697f17e5a6d9464d7",
+  "public/vendor/BufferGeometryUtils.js": "89602670f034024f39c08e786df1c4ac5dd6e4ab2e3abd906f9bb25982556178",
+  "public/vendor/SkeletonUtils.js": "eedd768765d6553f8082953ab3882e2c86dacc2eb7d180a312d1d52e86bb35c5"
+}

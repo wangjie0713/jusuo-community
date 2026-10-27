@@ -1,0 +1,6 @@
+{
+  "devices": [
+    { "device_key": "demo-living-light", "name": "客厅吊灯", "room": "客厅", "type": "light", "entity_id": "light.demo_living_room" },
+    { "device_key": "demo-bedroom-climate", "name": "卧室空调", "room": "卧室", "type": "climate", "entity_id": "climate.demo_bedroom" }
+  ]
+}

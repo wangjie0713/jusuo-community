@@ -1,0 +1,25 @@
+{
+  "name": "jusuo-community",
+  "version": "0.1.0-preview.3",
+  "private": true,
+  "type": "module",
+  "license": "MPL-2.0",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=deploy/.env server/app.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node scripts/check.mjs",
+    "package:preview": "python3 scripts/package_preview.py",
+    "package:upload": "python3 scripts/package_preview.py --upload"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wangjie0713/jusuo-community.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wangjie0713/jusuo-community/issues"
+  },
+  "homepage": "https://github.com/wangjie0713/jusuo-community#readme"
+}

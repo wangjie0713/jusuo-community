@@ -1,0 +1,38 @@
+# SPDX-License-Identifier: MPL-2.0
+# Review template, not a verified production deployment.
+services:
+  community:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    environment:
+      CE_MODE: ${CE_MODE:-demo}
+      CE_HOST: 0.0.0.0
+      CE_PORT: 4177
+      CE_PASSWORD: ${CE_PASSWORD:?Set your own long password in deploy/.env}
+      CE_PUBLIC_ORIGIN: https://localhost:8443
+      HA_BASE_URL: ${HA_BASE_URL:-http://host.docker.internal:8123}
+      HA_TOKEN: ${HA_TOKEN:-}
+    volumes:
+      # Replace example with your own ignored local mapping only for real mode.
+      - ../config/entity-map.example.json:/app/config/entity-map.local.json:ro
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    restart: unless-stopped
+  gateway:
+    image: caddy:2-alpine
+    ports:
+      - "127.0.0.1:8443:8443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - community
+    restart: unless-stopped
+volumes:
+  caddy_data:
+  caddy_config:
