@@ -1,0 +1,16 @@
+# SPDX-License-Identifier: MPL-2.0
+name: 功能建议
+description: 描述你想解决的家庭使用问题
+title: "[Idea] "
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: 你想完成什么？现在卡在哪里？
+      description: "无需提供家庭隐私信息。先描述场景与目标，不必设计技术方案。"
+    validations:
+      required: true
+  - type: textarea
+    id: alternative
+    attributes:
+      label: 现在如何处理？怎样算解决了？
