@@ -1,0 +1,37 @@
+# SPDX-License-Identifier: MPL-2.0
+name: 错误反馈
+description: 页面或基础控制没有按预期工作
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: "不要上传 .env、令牌、实际 entity_id、家庭地址或未脱敏截图。安全漏洞请按 SECURITY.md 私下反馈。"
+  - type: input
+    id: version
+    attributes:
+      label: CE 版本、系统、浏览器与 Node 版本
+      placeholder: "例如：0.1 / macOS / Chrome / Node 24"
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: 使用模式
+      options:
+        - 模拟家庭
+        - 自己的 Home Assistant
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 怎样重现
+      description: "只用虚构设备名称说明操作，不要贴完整配置。"
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: 预期效果与实际结果
+    validations:
+      required: true
